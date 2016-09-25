@@ -95,8 +95,8 @@ public class SensorHTS221 {
     * @throws IllegalArgumentException 
     */ 
     public void setAVG(int rateTemp, int rateHum) throws IOException, IllegalArgumentException{
-        if (rateTemp < 0 | rateTemp > 7) throw new IllegalArgumentException("rateTemp should be in range 0-7");
-        if (rateHum < 0 | rateHum > 7) throw new IllegalArgumentException("rateHum should be in range 0-7");
+        if (rateTemp < 0 || rateTemp > 7) throw new IllegalArgumentException("rateTemp should be in range 0-7");
+        if (rateHum < 0 || rateHum > 7) throw new IllegalArgumentException("rateHum should be in range 0-7");
         
         ByteBuffer buf = ByteBuffer.allocateDirect(1);
         
@@ -116,7 +116,7 @@ public class SensorHTS221 {
     * @throws IOException 
     */ 
     public void setAVGT(int rateTemp) throws IOException{
-        if (rateTemp < 0 | rateTemp > 7) throw new IllegalArgumentException("rateTemp should be in range 0-7");
+        if (rateTemp < 0 || rateTemp > 7) throw new IllegalArgumentException("rateTemp should be in range 0-7");
         
         ByteBuffer buf = ByteBuffer.allocateDirect(1);
         
@@ -136,7 +136,7 @@ public class SensorHTS221 {
     * @throws IOException 
     */ 
     public void setAVGH(int rateHum) throws IOException{
-        if (rateHum < 0 | rateHum > 7) throw new IllegalArgumentException("rateHum should be in range 0-7");
+        if (rateHum < 0 || rateHum > 7) throw new IllegalArgumentException("rateHum should be in range 0-7");
         
         ByteBuffer buf = ByteBuffer.allocateDirect(1);
         
